@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="lib/anime.min.js" defer></script>
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <h1>get sum pics from flickr</h1>
+
+    <div id="search-container">
+        <form id="search-form">
+            <input type="text" id="search-word-input" placeholder="search for something">
+
+            <input type="number" id="photo-amount-input" placeholder="number of photos">
+
+            <label for="size-select">size:</label>
+            <select id="size-select" size="1">
+                <option value="m">small</option>
+                <option value="w">medium</option>
+                <option value="z">large</option>
+            </select>
+
+            <label for="sort-by">sort by:</label>
+            <select name="sorting" id="sort-by" size="1">
+                <option value="relevance">by relevance</option>
+                <option value="date-posted-asc">by date</option>
+                <option value="interestingness-asc">by interest</option>
+            </select>
+
+            <button id="search-btn">search</button>
+        </form>
+
+        <div id="animation-div"></div>
+
+        <button id="scroll-to-top-btn">🡱</button>
+    </div>
+
+    <div id="search-result-div"></div>
+
+</body>
+
+</html>
