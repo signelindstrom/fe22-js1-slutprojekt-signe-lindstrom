@@ -24,7 +24,7 @@ function getSearchUrl(event) {
 
     // error-meddelande om nummer/text-inputen är tom
     if (inputSearchNumber == 0 || inputSearchWord == 0) {
-        error();
+        errorFunction();
     }
     else {
         fetchSearch(inputSearchWord, inputSearchNumber, searchSort);
@@ -39,7 +39,7 @@ function fetchSearch(searchWord, searchNumber, searchSortBy) {
         .then(response => response.json())
         .then(getSearchInfo)
         .catch(error => {
-            error();
+            errorFunction();
         })
 }
 
@@ -81,10 +81,10 @@ function getSearchInfo(searchData) {
 
 
 // visar error-meddelande
-function error() {
+function errorFunction() {
     const errorMessage = document.createElement('p');
     infoDiv.append(errorMessage);
-    errorMessage.innerText = 'something went wrong, did u fill in all the inputs? :(';
+    errorMessage.innerText = 'something went wrong :(';
     animationDiv.style.display = 'none';
 }
 
